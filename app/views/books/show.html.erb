@@ -1,0 +1,16 @@
+<% if @book.errors.any? %>
+  <%= @book.errors.count %>ERROR
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<p>Title:<%= @book.title %></p>
+
+<p>Body:<%= @book.body %></p>
+
+<%= link_to "edit", edit_book_path %>
+
+<%= link_to "back", books_path %>
