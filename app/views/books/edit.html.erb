@@ -1,8 +1,22 @@
-<h2>Editing Book</h2>
+<h1>Editing Book</h1>
+
 <%= form_with model: @book do |f| %>
-<h1>Title</h1>
+
+<% if @book.errors.any? %>
+<div class="message">
+  <h3><%= @book.errors.count %> errors prohibited this book from being saved: </h3>
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+</div>
+
+<h2>Title</h2>
 <%= f.text_field :title %>
-<h1>Body</h1>
+
+<h2>Body</h2>
 <%= f.text_area :body %>
 <%= f.submit 'Update Book' %>
 <% end %>
