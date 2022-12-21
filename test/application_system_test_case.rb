@@ -8,5 +8,6 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
     assert_template 'homes/top'
     assert_select "a[href=?]", root_path
     assert_select "a[href=?]", books_path
+    assert_select "a[href=?]", signup_path
   end
 end
