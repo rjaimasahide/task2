@@ -6,7 +6,7 @@ class HomesControllerTest < ActionDispatch::IntegrationTest
   # end
 
   test "get homes" do
-    get root_url
+    get root_path
     assert_response :success
     assert_select "h1", "ようこそBookersへ！"
   end
