@@ -56,3 +56,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'net-smtp'
 gem 'rails-controller-testing'
+
+#ページネーションで使う
+gem 'kaminari','~> 1.2.1'
